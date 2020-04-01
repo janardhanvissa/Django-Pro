@@ -1,0 +1,15 @@
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Social Login</title>
+</head>
+<body>
+<h2>{{user}}</h2>
+	<button><a href="{% provider_login_url "google" method="js_sdk" %}" >Google Connect</a></button><br><br>
+	<button><a href="{% provider_login_url "github" method="js_sdk"%}" >Github Connect</a></button><br><br>
+	<button><a href="{% provider_login_url "facebook" method="js_sdk" %}" >Facebook Connect</a></button>
+</body>
+</html>
